@@ -5,7 +5,7 @@ const pool = createPool({
     host: 'localhost',
     user: 'root',
     password:'Andrpro2021.',
-    database:'barbasdb'
+    database:'barbasapp'
 });
 
 export {pool};
