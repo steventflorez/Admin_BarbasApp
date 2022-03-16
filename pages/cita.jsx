@@ -11,7 +11,7 @@ export default function cita() {
         <div className='text-center container cont'>
         <h1>Agendar Nueva cita</h1>
         <Barberos/> 
-        <h2>Horarios</h2>
+        <h2>Horario</h2>
         <Horarios/>
         <br />
         <h2>Servicios</h2>
