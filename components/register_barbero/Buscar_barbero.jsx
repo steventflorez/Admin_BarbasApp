@@ -2,8 +2,14 @@ import React from 'react'
 import { FaSearch } from 'react-icons/fa';
 import { MdDelete } from "react-icons/md";
 import { FaUserEdit } from 'react-icons/fa';
+import { useState, useEffect } from "react";
+import axios from 'axios';
 
 export default function Buscar_barbero() {
+
+
+
+
   return (
     <div>
         <form>
@@ -28,9 +34,9 @@ export default function Buscar_barbero() {
   <table className="table table-hover">
                 <thead>
                     <tr>
-                        <th scope="col">Numero</th>
                         <th scope="col">Nombre</th>
-                        <th scope="col">Apellido</th>
+                        <th scope="col">telefono</th>
+                        <th scope="col">cedula</th>
                         <th scope="col">Correo</th>
                         <th scope="col">Fecha</th>
                         <th scope="col"></th>
