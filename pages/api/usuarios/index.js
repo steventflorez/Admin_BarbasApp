@@ -27,8 +27,8 @@ export default function index(req, res) {
 const getUser = async (req, res) => {
 
     try {
-        const number = req.query.number
-    const [result] = await pool.query(`SELECT * FROM usuarios WHERE numeroUsuario = ${number} `)
+        const number = req.query.telefono
+    const [result] = await pool.query(`SELECT * FROM usuarios WHERE telefono = ${number} `)
     return res.status(200).json(result)
     } catch (error) {
         return res.status(200).json(error.message)
@@ -40,16 +40,20 @@ const getUser = async (req, res) => {
 
 const saveUser = async (req, res) => {
     const {
-        numeroUsuario,
-        nombreUsuario,
-        apellidoUsuario,
-        correoUsuario
+        telefono,
+        nombre,
+        correo,
+        fecha_nacimiento,
+        barberias_id
+
     } = req.body
     const [result] = await pool.query('INSERT INTO usuarios SET ?', {
-        numeroUsuario,
-        nombreUsuario,
-        apellidoUsuario,
-        correoUsuario
+        
+        nombre,
+        telefono,
+        correo,
+        fecha_nacimiento,
+        barberias_id
     })
     console.log(result);
     return res.status(200).json('!Usuario registrado Con exito¡');

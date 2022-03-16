@@ -12,6 +12,7 @@ export default function Form_register({chengueAlerta}) {
         const nomm = document.querySelector('#nomm').value;
         const apee = document.querySelector('#apee').value;
         const corr = document.querySelector('#corr').value;
+        const fecha = document.querySelector('#start').value;
 
         if(numm == "" & nomm == "" & apee == "" & corr == "" ){
             console.log(numm,nomm,apee,corr)
@@ -21,7 +22,7 @@ export default function Form_register({chengueAlerta}) {
             
             const { data: usuarios } = await axios.get('http://localhost:3000/api/usuarios', {
             params: {
-                number: document.querySelector('#tell').value
+                telefono: document.querySelector('#tell').value
 
             }
         })
@@ -31,10 +32,11 @@ export default function Form_register({chengueAlerta}) {
         if (usuarios.length === 0) {
 
             const res = await axios.post('/api/usuarios', {
-                numeroUsuario: numm,
-                nombreUsuario: nomm,
-                apellidoUsuario: apee,
-                correoUsuario: corr,
+                telefono: numm,
+                nombre: nomm,
+                correo : corr,
+                fecha_nacimiento: fecha,
+                barberias_id: '2'   
 
             });
 
