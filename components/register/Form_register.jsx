@@ -39,7 +39,7 @@ export default function Form_register({chengueAlerta}) {
                 barberias_id: '2'   
 
             });
-
+            
             console.log(res.data)
 
             chengueAlerta('Usuario Registrado', res.data, 'alert-success')
