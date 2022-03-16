@@ -9,7 +9,7 @@ export default function cita() {
   return (
     <Nav>
         <div className='text-center container cont'>
-        <h1>Agendar cita</h1>
+        <h1>Agendar Nueva cita</h1>
         <Barberos/> 
         <h2>Horarios</h2>
         <Horarios/>
